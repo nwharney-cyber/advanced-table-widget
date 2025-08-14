@@ -1,7 +1,16 @@
 import { React } from 'jimu-core'
 import { DataSourceSelector } from 'jimu-ui/advanced/data-source-selector'
+import { TableWidgetConfig } from '../types/TableWidgetConfig'
 
-export default function Setting(props) {
+interface SettingProps {
+  config: TableWidgetConfig;
+  useDataSources: any;
+  onSettingChange: (change: { config?: TableWidgetConfig; useDataSources?: any }) => void;
+  id: string;
+  dataSources: any;
+}
+
+export default function Setting(props: SettingProps) {
   const { config, useDataSources, onSettingChange, id } = props
 
   // Defensive conversion for useDataSources
@@ -48,20 +57,21 @@ export default function Setting(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fields])
 
-  const handleChange = (key, value) => {
+  const handleChange = (key: keyof TableWidgetConfig, value: any) => {
     onSettingChange({ config: { ...config, [key]: value } })
   }
 
-  const handleNestedChange = (parent, key, value) => {
+  const handleNestedChange = (parent: keyof TableWidgetConfig, key: string, value: any) => {
+    const currentParentValue = config[parent] as Record<string, any> || {}
     onSettingChange({
       config: {
         ...config,
-        [parent]: { ...(config[parent] || {}), [key]: value }
+        [parent]: { ...currentParentValue, [key]: value }
       }
     })
   }
 
-  const handleOrderChange = (idx, value) => {
+  const handleOrderChange = (idx: number, value: string) => {
     const order = [...(config.columnOrder || [])]
     order[idx] = value
     onSettingChange({ config: { ...config, columnOrder: order } })

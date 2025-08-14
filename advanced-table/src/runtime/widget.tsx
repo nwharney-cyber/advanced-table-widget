@@ -90,6 +90,9 @@ export default function Widget(props: AllWidgetProps<any>) {
             if (!(fields || []).length && dataRecords.length > 0)
               fields = Object.keys(dataRecords[0].getData())
 
+            // Ensure fields is always an array before filtering
+            if (!Array.isArray(fields)) fields = [];
+
             // Filtering
             let filtered = enableFiltering && search
               ? dataRecords.filter(

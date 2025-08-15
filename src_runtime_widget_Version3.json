@@ -1,0 +1,9 @@
+{
+  "name": "advanced-table",
+  "label": "Advanced Table",
+  "description": "A baseline table widget that clones the standard Experience Builder Table functionality.",
+  "defaultSize": {
+    "width": 600,
+    "height": 400
+  }
+}

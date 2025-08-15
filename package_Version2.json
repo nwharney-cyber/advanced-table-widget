@@ -1,0 +1,17 @@
+{
+  "name": "advanced-table-widget",
+  "version": "1.0.0",
+  "description": "Experience Builder widget cloning the standard Table widget.",
+  "main": "src/runtime/widget.tsx",
+  "scripts": {
+    "start": "your-exb-start-command",
+    "build": "your-exb-build-command"
+  },
+  "dependencies": {
+    "jimu-core": "^1.10.0",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.0"
+  }
+}

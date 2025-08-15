@@ -1,0 +1,11 @@
+{
+  "name": "advanced-table",
+  "label": "Advanced Table",
+  "description": "A widget that displays attribute data from a connected data source in a table.",
+  "version": "1.0.0",
+  "exports": "src/runtime/widget.tsx",
+  "supportDataSource": true,
+  "properties": {
+    "hasSettingPage": true
+  }
+}

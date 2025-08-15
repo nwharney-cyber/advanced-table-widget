@@ -1,0 +1,23 @@
+{
+  "defaultPageSize": 10,
+  "enableSorting": true,
+  "enableFiltering": true,
+  "showFooter": true,
+  "showColumns": {},
+  "columnOrder": [],
+  "columnLabels": {},
+  "tableColor": "#FFFFFF",
+  "headerColor": "#2196F3",
+  "headerBold": true,
+  "rowHoverColor": "#E3F2FD",
+  "showRowNumbers": false,
+  "enablePagination": true,
+  "allowExport": true,
+  "allowRowSelection": false,
+  "showGridlines": true,
+  "fontSize": 14,
+  "cellPadding": 8,
+  "tableWidth": "100%",
+  "headerSticky": false,
+  "rowHighlight": false
+}

@@ -1,0 +1,18 @@
+{
+  "name": "advanced-table",
+  "label": "Advanced Table",
+  "description": "A full-featured table widget for ArcGIS Experience Builder.",
+  "author": "Your Name",
+  "version": "2.0.0",
+  "exbVersion": "1.18.0",
+  "type": "widget",
+  "translatedLocales": ["en", "es"],
+  "properties": {
+    "supportDataSource": true,
+    "dataSources": [
+      {
+        "useDataSource": true
+      }
+    ]
+  }
+}
